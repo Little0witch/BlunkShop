@@ -22,7 +22,7 @@ export const AuthPage: FC = () => {
             if (data) {
                 setTokenToLocalStorage('token', data.token)
                 dispatch(login(data))
-                toast.success('Account have been created')
+                toast.success('You have been logged in')
                 navigate('/')
             }
         } catch (err: any) {

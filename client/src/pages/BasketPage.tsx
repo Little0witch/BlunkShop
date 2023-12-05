@@ -5,6 +5,7 @@ import { Product } from "../components/Product";
 import { UserService } from "../api/UserService";
 import { changeUser } from "../store/userSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const BasketPage: FC = () => {
     const products: IProduct[] | undefined = useAppSelector((state) => state.user.user?.productsInBasket)
@@ -15,6 +16,7 @@ export const BasketPage: FC = () => {
     const buyProductsHandler = async () => {
         const data = await UserService.buyProducts()
         dispatch(changeUser(data))
+        //  toast.success('Products where boughted')
         navigate('/purchases')
     }
 

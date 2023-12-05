@@ -18,7 +18,8 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 loader: productsLoader,
-                element: <Home/>,
+                //element: <Home/>,
+                element: <ProductsPage/>,
             },
             {
                 path: 'auth',

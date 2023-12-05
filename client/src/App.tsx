@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useAppDispatch } from './store/hooks'
+import { useAppDispatch, useAppSelector } from './store/hooks'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router/router'
 import { AuthService } from './api/AuthService'
@@ -27,7 +27,7 @@ function App() {
 
     useEffect(() => {
         checkAuth()
-    }, [])
+    }, [useAppSelector((state) => state.user)])
 
     return <RouterProvider router={router}/>
 
