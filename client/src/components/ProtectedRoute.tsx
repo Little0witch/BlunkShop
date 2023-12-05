@@ -10,13 +10,13 @@ export const ProtectedRoute: FC<IProtectedRouteProps> = ({children}) => {
     const isAuth = useAuth()
     const navigate = useNavigate()
 
-    if (!isAuth) {
-        navigate('/unauthorized')
-    }
+    // if (!isAuth) {
+    //     navigate('/unauthorized')
+    // }
 
     return (
         <>
-            { isAuth && children } 
+            { isAuth && children    } 
         </>
     )
 }

@@ -17,6 +17,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: productsLoader,
                 element: <Home/>,
             },
             {
