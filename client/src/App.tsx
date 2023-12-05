@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useAppDispatch } from './store/hooks'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router/router'

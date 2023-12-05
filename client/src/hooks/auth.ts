@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { useAppSelector } from "../store/hooks";
 
 export function useAuth(): boolean {

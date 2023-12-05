@@ -46,23 +46,23 @@ export const AuthPage: FC = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center">
-            <h1 className="text-center">
+        <div className="mx-auto mt-8 flex flex-col justify-center items-center w-full">
+            <h1 className="text-center mb-8">
                 { isLogin ? 'Login' : 'Registration' }
             </h1>
 
             <form 
                 onSubmit={isLogin ? loginHandler : registrationHandler}
-                className="flex flex-col mx-auto w-1/2"
+                className="flex flex-col items-center gap-4 mx-auto w-1/5"
             >
-                <input onChange={(e) => setEmail(e.target.value)} className="" type="text" placeholder="email"/>
-                <input onChange={(e) => setPassword(e.target.value)} className="" type="password" placeholder="password" />
-                <button className="">
+                <input onChange={(e) => setEmail(e.target.value)} className="input" type="text" placeholder="email"/>
+                <input onChange={(e) => setPassword(e.target.value)} className="input" type="password" placeholder="password" />
+                <button className="btn btn-green">
                     Submit
                 </button>
             </form>
 
-            <div className="flex justify-center mt-5">
+            <div className="flex flex-col justify-center gap-3 mt-5">
                 <button onClick={() => setIsLogin(!isLogin)}>
                     { isLogin ? 'Don\'t have an account?' : 'Already have an account?' }
                 </button>

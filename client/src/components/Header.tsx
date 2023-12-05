@@ -19,34 +19,26 @@ export const Header: FC = () => {
     }
 
     return (
-        <header className="flex justify-between items-center ">
+        <header className="flex justify-between items-center bg-gray-200">
             <Link to='/products'>
                 <h1 className="font-bold">BlankShop</h1>
             </Link>
 
             { isAuth && 
-                <nav className="ml-auto mr-10">
-                    <li>
-                        <NavLink to={'/products'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/favourite'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Favourite</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/basket'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Basket</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/purchases'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Purchases</NavLink>
-                    </li>
+                <nav className="flex justify-between gap-4 ml-auto mr-10">
+                    <NavLink to={'/products'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Home</NavLink>
+                    <NavLink to={'/favourite'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Favourite</NavLink>
+                    <NavLink to={'/basket'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Basket</NavLink>
+                    <NavLink to={'/purchases'} className={({ isActive }) => isActive ? 'text-green-300' : 'text-black'}>Purchases</NavLink>
                 </nav>
             }
 
             { isAuth ? (
-                <button onClick={logoutHandler} className="btn btn-red">
+                <button onClick={logoutHandler} className="btn text-black/50 text-lg hover:text-black mr-4">
                     <span>Log Out</span>
                 </button> ) : (
-                <Link className="py-2 text-white/50 hover:text-white" to={'auth'}>
-                    Log In / Sign In
+                <Link className="py-2 text-black/50 hover:text-black text-lg mr-4" to={'auth'}>
+                    Log In
                 </Link> )
             }
         </header>

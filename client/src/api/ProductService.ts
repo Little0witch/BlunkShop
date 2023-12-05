@@ -1,4 +1,4 @@
-import { IProduct, IUser } from "../types/types";
+import { IProduct } from "../types/types";
 import { API } from "./AxiosAPI";
 
 export const ProductService = {
