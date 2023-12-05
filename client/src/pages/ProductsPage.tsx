@@ -16,7 +16,7 @@ export const ProductsPage: FC = () => {
 
     return (
         <>
-            <div className="grid grid-cols-3 gap-4 items-start">
+            <div className="grid grid-cols-4 gap-4 items-start">
                 { products.map(p => <Product key={p.id} product={p} />) }
             </div>
 

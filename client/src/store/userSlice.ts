@@ -25,7 +25,13 @@ export const userSlice = createSlice({
             state.isAuth = false
         },
         changeUser: (state, action: PayloadAction<IUser>) => {
+            console.log('Payload: ')
+            console.log(action.payload)
+            console.log('User before: ')
+            console.log(state.user)
             state.user = action.payload
+            console.log('User after: ')
+            console.log(state.user)
         }
     }
 })

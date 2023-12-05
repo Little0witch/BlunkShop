@@ -19,7 +19,7 @@ export const Header: FC = () => {
     }
 
     return (
-        <header className="flex justify-between items-center bg-gray-200">
+        <header className="flex justify-between items-center bg-gray-200 mb-4">
             <Link to='/products' className="ml-6    ">
                 <h1 className="font-bold text-xl">BlankShop</h1>
             </Link>
