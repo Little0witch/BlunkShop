@@ -26,24 +26,24 @@ export const Product: FC<IProductProps> = ({ product }) => {
     const likeHandler = async () => {
         const data = await UserService.toggleFavouriteProduct(user.id, product)
         dispatch(changeUser(data))
-        // if (isLiked) {
-        //     toast.success('Product removed from favorites')
-        // }
-        // else {
-        //     toast.success('Product added to favourites')
-        // }
+        if (isLiked) {
+            toast.success('Product removed from favorites')
+        }
+        else {
+            toast.success('Product added to favourites')
+        }
         setIsLiked(!setIsLiked)
     }
 
     const addToBasketHandler = async () => {
         const data = await UserService.toggleBasketProduct(user.id, product)
         dispatch(changeUser(data))
-        // if (isInBasket) {
-        //     toast.success('Product removed from basket')
-        // }
-        // else {
-        //     toast.success('Product added to basket')
-        // }
+        if (isInBasket) {
+            toast.success('Product removed from basket')
+        }
+        else {
+            toast.success('Product added to basket')
+        }
         setIsInBasket(!setIsInBasket)
     }
 

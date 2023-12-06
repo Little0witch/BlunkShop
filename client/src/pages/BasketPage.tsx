@@ -16,7 +16,7 @@ export const BasketPage: FC = () => {
     const buyProductsHandler = async () => {
         const data = await UserService.buyProducts()
         dispatch(changeUser(data))
-        //  toast.success('Products where boughted')
+        toast.success('Products where boughted')
         navigate('/purchases')
     }
 
